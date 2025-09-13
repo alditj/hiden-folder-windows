@@ -1,6 +1,6 @@
 @ECHO OFF
 if EXIST "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" goto UNLOCK
-if NOT EXIST .net goto MDPrivate
+if NOT EXIST secret goto MDPrivate
 :CONFIRM
 echo lock? (Y/N)
 set/p "cho=>"
@@ -19,7 +19,7 @@ goto End
 echo C:\Users\Guest 
 :START
 set /p pass=Command: 
-if NOT %pass%== @dm1n goto FAIL
+if NOT %pass%== admin123 goto FAIL
 attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
 ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" .net
 echo Folder Unlocked successfully
